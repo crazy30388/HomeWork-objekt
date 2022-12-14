@@ -1,7 +1,7 @@
 public class Main {
     public static void main(String[] args) {
         Book book = new Book("Финансист","Теодор Драйзер",1912);
-        Autor author = new Autor("Теодор","Драйзер");
+        Autor author = new Autor("Теодор"," Драйзер");
         System.out.println("Название книги = " + book.getName());
         System.out.println("Автор = " + author.getName());
         System.out.println("Год публикации = " + book.getTheYearOfPublishing() + " год");
