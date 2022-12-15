@@ -3,13 +3,13 @@ import java.util.Objects;
 public class Book {
     private String nameBook;
 
-    private String author;
+    private String autor;
 
     private int theYearOfPublishing;
 
     public Book (String nameBook, String author, int theYearOfPublishing){
         this.nameBook = nameBook;
-        this.author = author;
+        this.autor = author;
         this.theYearOfPublishing = theYearOfPublishing;
 
     }
@@ -17,7 +17,7 @@ public class Book {
         return this.nameBook;
     }
     public String getAuthor(){
-        return this.author;
+        return this.autor;
     }
     public int getTheYearOfPublishing(){
 
@@ -33,19 +33,19 @@ public class Book {
         if (this == o) return true;
         if (o == null || getClass() != o.getClass()) return false;
         Book book = (Book) o;
-        return theYearOfPublishing == book.theYearOfPublishing && Objects.equals(nameBook, book.nameBook) && Objects.equals(author, book.author);
+        return theYearOfPublishing == book.theYearOfPublishing && Objects.equals(nameBook, book.nameBook) && Objects.equals(autor, book.autor);
     }
 
     @Override
     public int hashCode() {
-        return Objects.hash(nameBook, author, theYearOfPublishing);
+        return Objects.hash(nameBook, autor, theYearOfPublishing);
     }
 
     @Override
     public String toString() {
         return "Book{" +
                 "name='" + nameBook + '\'' +
-                ", author='" + author + '\'' +
+                ", author='" + autor + '\'' +
                 ", theYearOfPublishing=" + theYearOfPublishing +
                 '}';
     }

@@ -4,12 +4,12 @@ public class Autor {
     private String firstName;
     private String lastName;
 
-    private String author;
+    private String autor;
 
     public Autor(String firstName, String lastName){
         this.firstName = firstName;
         this.lastName = lastName;
-        this.author = firstName + lastName;
+        this.autor = firstName + lastName;
     }
 
     public String getFirstName(){
@@ -18,8 +18,8 @@ public class Autor {
     public String getLastName(){
         return this.lastName;
     }
-    public String getAuthor(){
-        return this.author;
+    public String getAutor(){
+        return this.autor;
     }
 
     @Override
@@ -27,12 +27,12 @@ public class Autor {
         if (this == o) return true;
         if (o == null || getClass() != o.getClass()) return false;
         Autor autor = (Autor) o;
-        return Objects.equals(firstName, autor.firstName) && Objects.equals(lastName, autor.lastName) && Objects.equals(author, autor.author);
+        return Objects.equals(firstName, autor.firstName) && Objects.equals(lastName, autor.lastName) && Objects.equals(autor, autor.autor);
     }
 
     @Override
     public int hashCode() {
-        return Objects.hash(firstName, lastName, author);
+        return Objects.hash(firstName, lastName, autor);
     }
 
     @Override
@@ -40,9 +40,10 @@ public class Autor {
         return "Autor{" +
                 "firstName='" + firstName + '\'' +
                 ", lastName='" + lastName + '\'' +
-                ", name='" + author + '\'' +
+                ", name='" + autor + '\'' +
                 '}';
     }
+
 
 
 }
