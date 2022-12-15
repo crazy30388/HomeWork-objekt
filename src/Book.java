@@ -3,20 +3,20 @@ import java.util.Objects;
 public class Book {
     private String nameBook;
 
-    private String autor;
+    private Autor autor;
 
     private int theYearOfPublishing;
 
-    public Book (String nameBook, String author, int theYearOfPublishing){
+    public Book (String nameBook, Autor autor, int theYearOfPublishing){
         this.nameBook = nameBook;
-        this.autor = author;
+        this.autor = autor;
         this.theYearOfPublishing = theYearOfPublishing;
 
     }
     public String getNameBook(){
         return this.nameBook;
     }
-    public String getAuthor(){
+    public Autor getAutor(){
         return this.autor;
     }
     public int getTheYearOfPublishing(){
