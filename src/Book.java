@@ -1,20 +1,20 @@
 import java.util.Objects;
 
 public class Book {
-    private String name;
+    private String nameBook;
 
     private String author;
 
     private int theYearOfPublishing;
 
-    public Book (String name, String author, int theYearOfPublishing){
-        this.name = name;
+    public Book (String nameBook, String author, int theYearOfPublishing){
+        this.nameBook = nameBook;
         this.author = author;
         this.theYearOfPublishing = theYearOfPublishing;
 
     }
-    public String getName(){
-        return this.name;
+    public String getNameBook(){
+        return this.nameBook;
     }
     public String getAuthor(){
         return this.author;
@@ -33,20 +33,21 @@ public class Book {
         if (this == o) return true;
         if (o == null || getClass() != o.getClass()) return false;
         Book book = (Book) o;
-        return theYearOfPublishing == book.theYearOfPublishing && Objects.equals(name, book.name) && Objects.equals(author, book.author);
+        return theYearOfPublishing == book.theYearOfPublishing && Objects.equals(nameBook, book.nameBook) && Objects.equals(author, book.author);
     }
 
     @Override
     public int hashCode() {
-        return Objects.hash(name, author, theYearOfPublishing);
+        return Objects.hash(nameBook, author, theYearOfPublishing);
     }
 
     @Override
     public String toString() {
         return "Book{" +
-                "name='" + name + '\'' +
+                "name='" + nameBook + '\'' +
                 ", author='" + author + '\'' +
                 ", theYearOfPublishing=" + theYearOfPublishing +
                 '}';
     }
+
 }
